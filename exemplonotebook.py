@@ -9,7 +9,7 @@ class Aplicacion(Gtk.Window):
     def __init__(self):
         super().__init__()
         self.set_title("Exemplo de uso NoteBook")
-        self.set_border_width(5)
+        self.set_border_width(10)
 
         cartafol=Gtk.Notebook()
 
