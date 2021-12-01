@@ -74,7 +74,11 @@ class Aplicacion(Gtk.Window):
         chkUtilizarSubraiado = Gtk.CheckButton (label= "Utilizar Subraiado")
         grid.attach_next_to(chkUtilizarSubraiado,chkSeleccionable,Gtk.PositionType.BOTTOM,1,1)
 
+        chkSeguirEnlaces = Gtk.CheckButton(label="Seguir enlaces Subraiado")
+        grid.attach_next_to(chkSeguirEnlaces, chkSeleccionable, Gtk.PositionType.RIGHT, 1, 1)
 
+        txtComportamentoEtiqueta  =Gtk.Entry()
+        grid.attach_next_to(txtComportamentoEtiqueta, chkUtilizarSubraiado, Gtk.PositionType.RIGHT,1,1)
 
 
         self.connect("destroy",Gtk.main_quit)
