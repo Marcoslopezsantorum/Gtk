@@ -24,9 +24,10 @@ class Aplicacion(Gtk.Window):
 
 
         lblApariencia = Gtk.Label()
-        lblApariencia.set_markup("<b>Apariencia</b>")
-        lblApariencia.set_justify((Gtk.Justification.LEFT))
+        lblApariencia.set_markup("<b>Appearance</b>")
+        lblApariencia.props.xalign = 0
         caixaV.pack_start(lblApariencia,True,True,2)
+
 
         rede = Gtk.Grid()
         caixaV.pack_start(rede,True,True,0)
@@ -60,6 +61,18 @@ class Aplicacion(Gtk.Window):
         txtPatron = Gtk.Entry()
         rede.attach(txtPatron,2,4,2,1)
 
+
+        lblComportamentoEtiqueta = Gtk.Label(label = "Comportamento da etiqueta")
+        lblComportamentoEtiqueta.set_markup("<b>Comportamento de etiqueta</b>")
+        lblComportamentoEtiqueta.props.xalign = 0
+        caixaV.pack_start(lblComportamentoEtiqueta,False,False,0)
+
+        grid = Gtk.Grid()
+        caixaV.pack_start(grid,True,True,0)
+        chkSeleccionable = Gtk.CheckButton(label ="Seleccionable")
+        grid.add(chkSeleccionable)
+        chkUtilizarSubraiado = Gtk.CheckButton (label= "Utilizar Subraiado")
+        grid.attach_next_to(chkUtilizarSubraiado,chkSeleccionable,Gtk.PositionType.BOTTOM,1,1)
 
 
 
