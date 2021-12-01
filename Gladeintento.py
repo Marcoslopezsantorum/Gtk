@@ -45,6 +45,24 @@ class Aplicacion(Gtk.Window):
         caixa.pack_start(btnEditarEtiqueta,True,False,0)
         rede.attach_next_to(caixa,lblEtiqueta,Gtk.PositionType.RIGHT,3,2)
 
+        rbtAtributos = Gtk.RadioButton(label = "Atributos:")
+        rede.attach(rbtAtributos,0,2,1,1)
+        btnEditarAtributos = Gtk.Button(label="Editar atributos")
+        rede.attach_next_to(btnEditarAtributos,rbtAtributos,Gtk.PositionType.RIGHT,3,1)
+
+
+        rbtUsarMarcado = Gtk.RadioButton (label="Usar marcado")
+        rede.attach(rbtUsarMarcado,0,3,2,1)
+
+
+        rbtPatron = Gtk.RadioButton(label = "Patrón")
+        rede.attach(rbtPatron,0,4,1,1)
+        txtPatron = Gtk.Entry()
+        rede.attach(txtPatron,2,4,2,1)
+
+
+
+
 
         self.connect("destroy",Gtk.main_quit)
         self.show_all()
