@@ -27,11 +27,17 @@ class Aplicacion(Gtk.Window):
         cuadricula.attach(btnBoton4,1,1, 2,1) #FORMA ABSOLUTA
         cuadricula.attach_next_to(btnBoton5,btnBoton4, Gtk.PositionType.BOTTOM, 1, 1)#Forma Relativa
         cuadricula.attach(btnBoton6,2,2,1,1 )
+
+
+
+        builder = Gtk.Builder()
+        builder.add_from_file("cadroGlade.glade")
+        caixaGlade = builder.get_object ("caixaGlade")
+
+        cuadricula.pack_start(caixaGlade, True, True, 0)
+
         self.connect ("destroy", Gtk.main_quit)
         self.show_all()
-
-
-
 
 
 if __name__ =="__main__":

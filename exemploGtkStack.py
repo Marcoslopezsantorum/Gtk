@@ -17,15 +17,12 @@ class Aplicacion(Gtk.Window):
         panel.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
         panel.set_transition_duration(2000)
 
-        pulsame = Gtk.CheckButton(label = "tocame ;)")
-        panel.add_titled(pulsame, "Púlsame",  "paso1")
+
 
         etiqueta =  Gtk.Label()
-        etiqueta.set_markup ("<big>Unha etiqueta presuntuosa</big>")
-        panel.add_titled(etiqueta, "Etiqueta", "paso2")
 
-        casa = gridConBotons.CaixaConBotons()
-        panel.add_titled(casa, "Etiqueta", "paso3")
+        panel.add_titled(etiqueta, "Etiqueta", "Zoa1")
+
 
         selector_paneis = Gtk.StackSwitcher()
         selector_paneis.set_stack(panel)

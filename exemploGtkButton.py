@@ -27,7 +27,7 @@ class Aplicacion(Gtk.Window):
         self.show_all()
 
     def on_btnBotonAbrir_clicked(self, boton):
-            print("O boton 'Abrir' foi pulsado")
+            print("O boton 'Aceptar' Esta activado")
 
 
 
