@@ -36,7 +36,7 @@ class Aplicacion(Gtk.Window):
         celda = Gtk.CellRendererText()
         trvColumna.pack_start(celda, True)
         trvColumna.add_attribute(celda, "text", 1)
-        #Columna 3
+        #Columna3
         tipoParentesco = Gtk.ListStore(str)
         tipoParentesco.append(["Sen datos"])
         tipoParentesco.append(["Lexítimo"])
